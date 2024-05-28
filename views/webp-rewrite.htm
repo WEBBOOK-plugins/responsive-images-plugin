@@ -16,7 +16,7 @@
     RewriteCond %{HTTP_ACCEPT} image/webp
     RewriteCond %{REQUEST_URI} ^/?storage/.*\.(jpe?g|png)
     RewriteCond %{REQUEST_FILENAME}\.webp !-f
-    RewriteRule ^/?(.*)$ plugins/offline/responsiveimages/webp.php?path=$1 [NC,END]
+    RewriteRule ^/?(.*)$ plugins/webbook/responsiveimages/webp.php?path=$1 [NC,END]
     {% endif %}
 </ifModule>
 <IfModule mod_headers.c>

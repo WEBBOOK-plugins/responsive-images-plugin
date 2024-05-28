@@ -1,11 +1,11 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Console;
+namespace WebBook\ResponsiveImages\Console;
 
 
 use Cms\Classes\Theme;
 use Illuminate\Console\Command;
-use OFFLINE\ResponsiveImages\Classes\ImagePreloader;
+use WebBook\ResponsiveImages\Classes\ImagePreloader;
 use Symfony\Component\Console\Input\InputArgument;
 
 class GenerateResizedImages extends Command

@@ -1,6 +1,6 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes;
+namespace WebBook\ResponsiveImages\Classes;
 
 
 class ImageSource

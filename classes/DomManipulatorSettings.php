@@ -1,9 +1,9 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes;
+namespace WebBook\ResponsiveImages\Classes;
 
 
-use OFFLINE\ResponsiveImages\Models\Settings;
+use WebBook\ResponsiveImages\Models\Settings;
 
 class DomManipulatorSettings
 {

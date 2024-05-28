@@ -93,7 +93,7 @@ function validatePath(string $path)
     }
 
     // Get the project's base path based on the current directory.
-    $basePath = str_replace('plugins/offline/responsiveimages', '', realpath(__DIR__));
+    $basePath = str_replace('plugins/webbook/responsiveimages', '', realpath(__DIR__));
 
     // Make sure the included path starts with the project's base path.
     if (strpos($path, $basePath) !== 0) {

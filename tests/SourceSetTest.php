@@ -1,9 +1,9 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Tests;
+namespace WebBook\ResponsiveImages\Tests;
 
 use Illuminate\Support\Facades\URL;
-use OFFLINE\ResponsiveImages\Classes\SourceSet;
+use WebBook\ResponsiveImages\Classes\SourceSet;
 use PluginTestCase;
 
 class SourceSetTest extends PluginTestCase

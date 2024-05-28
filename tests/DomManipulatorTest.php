@@ -1,8 +1,8 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Tests;
+namespace WebBook\ResponsiveImages\Tests;
 
-use OFFLINE\ResponsiveImages\Classes\DomManipulator;
+use WebBook\ResponsiveImages\Classes\DomManipulator;
 use PluginTestCase;
 
 class DomManipulatorTest extends PluginTestCase

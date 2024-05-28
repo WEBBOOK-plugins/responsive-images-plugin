@@ -1,6 +1,6 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes\Htaccess;
+namespace WebBook\ResponsiveImages\Classes\Htaccess;
 
 use RuntimeException;
 use View;
@@ -27,7 +27,7 @@ class HtaccessWriter
             $this->removeSection($section);
         }
 
-        $view = 'offline.responsiveimages::' . $section;
+        $view = 'webbook.responsiveimages::' . $section;
 
         if ( ! View::exists($view)) {
             throw new RuntimeException('Cannot find htaccess template for section ' . $section);
@@ -65,17 +65,17 @@ class HtaccessWriter
     protected function prependContents($contents, $section)
     {
         $append   = [];
-        $append[] = "## START OFFLINE.ResponsiveImages - ${section}";
+        $append[] = "## START WebBook.ResponsiveImages - ${section}";
         $append[] = '#  DO NOT REMOVE THESE LINES';
         $append[] = $contents;
-        $append[] = "## END OFFLINE.ResponsiveImages - ${section}";
+        $append[] = "## END WebBook.ResponsiveImages - ${section}";
 
         $this->contents = implode("\n", $append) . "\n\n" .  $this->contents;
     }
 
     protected function sectionRegex($section)
     {
-        return "/(## START OFFLINE\.ResponsiveImages - ${section}.*## END OFFLINE\.ResponsiveImages - ${section})/ims";
+        return "/(## START WebBook\.ResponsiveImages - ${section}.*## END WebBook\.ResponsiveImages - ${section})/ims";
     }
 
 }

@@ -1,11 +1,11 @@
-<?php namespace OFFLINE\ResponsiveImages\Console;
+<?php namespace WebBook\ResponsiveImages\Console;
 
 use Illuminate\Console\Command;
 
 use Artisan;
 use File;
 
-use OFFLINE\ResponsiveImages\Models\Settings;
+use WebBook\ResponsiveImages\Models\Settings;
 
 /**
  * Clear Command
@@ -37,7 +37,7 @@ class Clear extends Command
         // Clear resized images
         $path = storage_path('app/resources/resize');
         File::cleanDirectory($path);
-        
+
         // Clear responsive images
         $path = storage_path('temp/public');
         $root = new \RecursiveDirectoryIterator($path);

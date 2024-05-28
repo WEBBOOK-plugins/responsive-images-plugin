@@ -1,8 +1,8 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes\Convert;
+namespace WebBook\ResponsiveImages\Classes\Convert;
 
-use OFFLINE\ResponsiveImages\Models\Settings;
+use WebBook\ResponsiveImages\Models\Settings;
 
 class PathProcessorOptions
 {

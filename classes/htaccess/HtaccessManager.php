@@ -1,6 +1,6 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes\Htaccess;
+namespace WebBook\ResponsiveImages\Classes\Htaccess;
 
 
 class HtaccessManager

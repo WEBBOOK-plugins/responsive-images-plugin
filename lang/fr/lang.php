@@ -1,17 +1,20 @@
-<?php return [
-    'plugin'            => [
-        'name'                       => 'ResponsiveImages',
-        'description'                => 'Ajoute les attributs srcset et taille à vos balises <img>',
-        'author'                     => 'OFFLINE LLC',
-        'manage_settings'            => 'Réglages pour les images adaptatives',
+<?php
+
+declare(strict_types=1);
+
+return [
+    'plugin' => [
+        'name' => 'ResponsiveImages',
+        'description' => 'Ajoute les attributs srcset et taille à vos balises <img>',
+        'author' => 'WebBook',
+        'manage_settings' => 'Réglages pour les images adaptatives',
         'manage_settings_permission' => 'Peut accéder aux paramètres de ResponsiveImages.',
     ],
 
     'settings' => [
-
         'tabs' => [
             'responsive_image' => 'Responsive Image',
-            'focuspoint' => 'Focus-Point'
+            'focuspoint' => 'Focus-Point',
         ],
 
         'sections' => [
@@ -51,5 +54,5 @@
             'confirm' => 'Êtes-vous sur de vouloir vider le cache des images ?',
             'success' => 'Cache des images vidé avec succès',
         ],
-    ]
+    ],
 ];

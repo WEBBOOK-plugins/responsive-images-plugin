@@ -1,6 +1,6 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes\Focuspoint;
+namespace WebBook\ResponsiveImages\Classes\Focuspoint;
 
 use October\Rain\Database\Attach\File as FileBase;
 
@@ -17,12 +17,12 @@ class File extends FileBase
     {
         list($width, $height) = $this->normalizeSizes($width, $height);
 
-        return 'offline-focus_' .
+        return 'webbook-focus_' .
             $this->id . '_' .
             $width . '_' .
             $height . '_' .
-            $this->offline_responsiveimages_focus_x_axis . '_' .
-            $this->offline_responsiveimages_focus_y_axis . '_' .
+            $this->webbook_responsiveimages_focus_x_axis . '_' .
+            $this->webbook_responsiveimages_focus_y_axis . '_' .
             $options['offset'][0] . '_' .
             $options['offset'][1] . '_' .
             $options['mode'] . '.' .
@@ -73,14 +73,14 @@ class File extends FileBase
         return $focusFile;
     }
 
-    public function getOfflineResponsiveimagesFocusXAxisAttribute()
+    public function getWebBookResponsiveimagesFocusXAxisAttribute()
     {
-        return $this->originalFile->offline_responsiveimages_focus_x_axis;
+        return $this->originalFile->webbook_responsiveimages_focus_x_axis;
     }
 
-    public function getOfflineResponsiveimagesFocusYAxisAttribute()
+    public function getWebBookResponsiveimagesFocusYAxisAttribute()
     {
-        return $this->originalFile->offline_responsiveimages_focus_y_axis;
+        return $this->originalFile->webbook_responsiveimages_focus_y_axis;
     }
 
 }

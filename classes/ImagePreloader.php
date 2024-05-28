@@ -1,6 +1,6 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes;
+namespace WebBook\ResponsiveImages\Classes;
 
 
 use Backend\Facades\Backend;
@@ -9,7 +9,7 @@ use Cms\Classes\Theme;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Event;
-use OFFLINE\ResponsiveImages\Models\Settings;
+use WebBook\ResponsiveImages\Models\Settings;
 use Symfony\Component\Console\Output\NullOutput;
 use Symfony\Component\Console\Output\OutputInterface;
 

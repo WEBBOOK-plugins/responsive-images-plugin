@@ -1,6 +1,6 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes;
+namespace WebBook\ResponsiveImages\Classes;
 
 use October\Rain\Database\Attach\Resizer as ResizerOCV1;
 use October\Rain\Resize\Resizer as ResizerOCV2;
@@ -16,7 +16,7 @@ if (class_exists(ResizerWN::class)) {
 
 /**
  * Class ImageResizer
- * @package OFFLINE\ResponsiveImages\Classes
+ * @package WebBook\ResponsiveImages\Classes
  */
 class ImageResizer extends Resizer
 {

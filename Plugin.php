@@ -1,15 +1,15 @@
-<?php namespace OFFLINE\ResponsiveImages;
+<?php namespace WebBook\ResponsiveImages;
 
 use Backend\FormWidgets\FileUpload;
 use Cms\Classes\Theme;
 use Illuminate\Support\Facades\Event;
 use October\Rain\Exception\ApplicationException;
-use OFFLINE\ResponsiveImages\Classes\Focuspoint\File as FocusFile;
-use OFFLINE\ResponsiveImages\Classes\Focuspoint\FocuspointExtension;
-use OFFLINE\ResponsiveImages\Classes\SVG\SVGInliner;
-use OFFLINE\ResponsiveImages\Console\ConvertCommand;
-use OFFLINE\ResponsiveImages\Console\GenerateResizedImages;
-use OFFLINE\ResponsiveImages\Console\Clear;
+use WebBook\ResponsiveImages\Classes\Focuspoint\File as FocusFile;
+use WebBook\ResponsiveImages\Classes\Focuspoint\FocuspointExtension;
+use WebBook\ResponsiveImages\Classes\SVG\SVGInliner;
+use WebBook\ResponsiveImages\Console\ConvertCommand;
+use WebBook\ResponsiveImages\Console\GenerateResizedImages;
+use WebBook\ResponsiveImages\Console\Clear;
 use System\Classes\PluginBase;
 use System\Models\File;
 use System\Traits\AssetMaker;
@@ -30,7 +30,7 @@ class Plugin extends PluginBase
     public function boot()
     {
         $this->app['Illuminate\Contracts\Http\Kernel']
-            ->pushMiddleware('OFFLINE\ResponsiveImages\Classes\ResponsiveImagesMiddleware');
+            ->pushMiddleware('WebBook\ResponsiveImages\Classes\ResponsiveImagesMiddleware');
 
         FocuspointExtension::boot();
     }
@@ -43,10 +43,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'offline.responsiveimages::lang.plugin.name',
-            'description' => 'offline.responsiveimages::lang.plugin.description',
-            'author'      => 'offline.responsiveimages::lang.plugin.author',
-            'homepage'    => 'https://github.com/OFFLINE-GmbH/oc-responsive-images-plugin',
+            'name'        => 'webbook.responsiveimages::lang.plugin.name',
+            'description' => 'webbook.responsiveimages::lang.plugin.description',
+            'author'      => 'webbook.responsiveimages::lang.plugin.author',
+            'homepage'    => 'https://github.com/WebBook-GmbH/oc-responsive-images-plugin',
             'icon'        => 'icon-file-image-o',
         ];
     }
@@ -59,9 +59,9 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'offline.responsiveimages.manage_settings' => [
-                'tab'   => 'offline.responsiveimages::lang.plugin.name',
-                'label' => 'offline.responsiveimages::lang.plugin.manage_settings_permission',
+            'webbook.responsiveimages.manage_settings' => [
+                'tab'   => 'webbook.responsiveimages::lang.plugin.name',
+                'label' => 'webbook.responsiveimages::lang.plugin.manage_settings_permission',
             ],
         ];
     }
@@ -75,14 +75,14 @@ class Plugin extends PluginBase
     {
         return [
             'config' => [
-                'label'       => 'offline.responsiveimages::lang.plugin.name',
-                'description' => 'offline.responsiveimages::lang.plugin.manage_settings',
+                'label'       => 'webbook.responsiveimages::lang.plugin.name',
+                'description' => 'webbook.responsiveimages::lang.plugin.manage_settings',
                 'category'    => 'system::lang.system.categories.cms',
                 'icon'        => 'icon-file-image-o',
-                'class'       => 'Offline\ResponsiveImages\Models\Settings',
+                'class'       => 'webbook\ResponsiveImages\Models\Settings',
                 'order'       => 500,
                 'keywords'    => 'responsive images',
-                'permissions' => ['offline.responsiveimages.manage_settings'],
+                'permissions' => ['webbook.responsiveimages.manage_settings'],
             ],
         ];
     }
@@ -131,8 +131,8 @@ class Plugin extends PluginBase
     public function registerReportWidgets()
     {
         return [
-            'OFFLINE\ResponsiveImages\ReportWidgets\ClearCache' => [
-                'label'   => 'offline.responsiveimages::lang.reportwidgets.clearcache.label',
+            'WebBook\ResponsiveImages\ReportWidgets\ClearCache' => [
+                'label'   => 'webbook.responsiveimages::lang.reportwidgets.clearcache.label',
                 'context' => 'dashboard'
             ]
         ];

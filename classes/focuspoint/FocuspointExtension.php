@@ -1,10 +1,10 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes\Focuspoint;
+namespace WebBook\ResponsiveImages\Classes\Focuspoint;
 
 
 use Illuminate\Support\Facades\Event;
-use OFFLINE\ResponsiveImages\Classes\Focuspoint\File as FocusFile;
+use WebBook\ResponsiveImages\Classes\Focuspoint\File as FocusFile;
 use System\Models\File;
 
 class FocuspointExtension
@@ -14,21 +14,21 @@ class FocuspointExtension
     {
         // Register Backend Assets.
         Event::listen('backend.page.beforeDisplay', function ($controller, $action, $params) {
-            $controller->addJs('/plugins/offline/responsiveimages/assets/js/focuspoint-tool.js');
+            $controller->addJs('/plugins/webbook/responsiveimages/assets/js/focuspoint-tool.js');
         });
 
         // Add the X and Y Focus point fields to the file upload popup.
         Event::listen('system.extendConfigFile', function (string $path, $config = []) {
             if ($path === '/modules/system/models/file/fields.yaml') {
-                $config['fields']['offline_responsiveimages_focus_x_axis'] = [
-                    'label' => 'offline.responsiveimages::lang.fields.focus_x_axis',
+                $config['fields']['webbook_responsiveimages_focus_x_axis'] = [
+                    'label' => 'webbook.responsiveimages::lang.fields.focus_x_axis',
                     'type' => 'number',
                     'span' => 'left',
                     'cssClass' => 'focuspoint-x-axis',
                     'readOnly' => true,
                 ];
-                $config['fields']['offline_responsiveimages_focus_y_axis'] = [
-                    'label' => 'offline.responsiveimages::lang.fields.focus_y_axis',
+                $config['fields']['webbook_responsiveimages_focus_y_axis'] = [
+                    'label' => 'webbook.responsiveimages::lang.fields.focus_y_axis',
                     'type' => 'number',
                     'span' => 'right',
                     'cssClass' => 'focuspoint-y-axis',

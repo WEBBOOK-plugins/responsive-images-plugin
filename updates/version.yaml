@@ -35,7 +35,7 @@
 2.2.0: Added support for automatic WebP conversion
 2.2.1: Optimized WebP implementation
 2.2.2: Performance improvements (thanks to @mauserrifle)
-2.2.3: Optimized handling of custom src attributes 
+2.2.3: Optimized handling of custom src attributes
 2.2.4: Optimized PHP 7.4 support
 2.2.5: Further optimized PHP 7.4 support
 2.2.6: Optimized WebP image quality
@@ -68,8 +68,8 @@
 2.3.15:
     - "Added filesize limit to WebP converter: By default, only images that are 750 KB or less are converted to WebP to prevent memory issues. Patch webp.php to customize this limit."
 2.3.16:
-    - 'Created table offline_responsiveimages_inconvertibles'
-    - table_create_offline_responsiveimages_inconvertibles.php
+    - 'Created table webbook_responsiveimages_inconvertibles'
+    - table_create_webbook_responsiveimages_inconvertibles.php
 2.4.0:
     - 'Added "responsive-images:convert" console command to create WebP images using a Cronjob (check README). It is recommended you use this method instead of the automatic WebP conversion going forward. To update, go to the backend settings and hit save with the automatic WebP conversion option turned off. This will update your .htaccess file. Then setup a Cronjob to run the conversion command to generate the WebP images.'
 2.4.1:
@@ -116,3 +116,5 @@
     - 'Fixed config extension event handler'
 2.7.2:
     - 'Fixed config extension event handler'
+3.0.0:
+    - 'Init plugin for WebBook author'

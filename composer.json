@@ -1,5 +1,5 @@
 {
-  "name": "offline/oc-responsiveimages-plugin",
+  "name": "webbook/oc-responsiveimages-plugin",
   "type": "october-plugin",
   "description": "ResponsiveImages Plugin for October CMS",
   "keywords": [
@@ -12,8 +12,14 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Tobias Kündig",
-      "email": "tobias@offline.ch"
+      "name": "Martin Zbořil",
+      "email": "martin@webbook.page",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Jiří Synáček",
+      "email": "jirka@webbook.page",
+      "role": "Co-founder"
     }
   ],
   "require": {

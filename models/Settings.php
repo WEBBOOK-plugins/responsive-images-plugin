@@ -1,8 +1,8 @@
-<?php namespace OFFLINE\ResponsiveImages\Models;
+<?php namespace WebBook\ResponsiveImages\Models;
 
 use Model;
 use October\Rain\Support\Facades\Flash;
-use OFFLINE\ResponsiveImages\Classes\Htaccess\HtaccessManager;
+use WebBook\ResponsiveImages\Classes\Htaccess\HtaccessManager;
 
 class Settings extends Model
 {
@@ -10,7 +10,7 @@ class Settings extends Model
      * Default prefix for WebP images.
      * @var string
      */
-    const DEFAULT_WEBP_PREFIX = 'plugins/offline/responsiveimages/webp.php?path=';
+    const DEFAULT_WEBP_PREFIX = 'plugins/webbook/responsiveimages/webp.php?path=';
     const DEFAULT_WEBP_CONVERT_OPTIONS = [
         'converters' => [
             // Use only the native PHP image libraries since all other calls by the webp converter library
@@ -25,7 +25,7 @@ class Settings extends Model
     public $implement = ['System.Behaviors.SettingsModel'];
 
     // A unique code
-    public $settingsCode = 'offline_responsiveimages_settings';
+    public $settingsCode = 'webbook_responsiveimages_settings';
 
     // Reference to field configuration
     public $settingsFields = 'fields.yaml';
@@ -63,7 +63,7 @@ class Settings extends Model
             $htaccess->save();
         } catch (\Throwable $e) {
             logger()->error(
-                '[OFFLINE.ResponsiveImages] Failed to automatically enable WebP support using .htaccess',
+                '[WebBook.ResponsiveImages] Failed to automatically enable WebP support using .htaccess',
                 ['exeption' => $e]
             );
             Flash::warning('Failed to enable WebP support using .htaccess. You have to manually configure your server!');

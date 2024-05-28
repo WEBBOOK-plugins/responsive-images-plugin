@@ -1,6 +1,6 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes\Exceptions;
+namespace WebBook\ResponsiveImages\Classes\Exceptions;
 
 use InvalidArgumentException;
 

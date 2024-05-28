@@ -1,6 +1,6 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes\Convert;
+namespace WebBook\ResponsiveImages\Classes\Convert;
 
 use Illuminate\Console\OutputStyle;
 use Illuminate\Support\Facades\DB;
@@ -63,7 +63,7 @@ class PathProcessor
                 $this->output->write(sprintf("<info>-> converting %-s</info>\n", $file->getFilename()));
                 $this->result->incrementFiles();
             } catch (\Throwable $e) {
-                DB::table('offline_responsiveimages_inconvertibles')->insert([
+                DB::table('webbook_responsiveimages_inconvertibles')->insert([
                     'filename' => $file->getFilename(),
                     'path' => $file->getPath(),
                     'error' => $e->getMessage()
@@ -137,7 +137,7 @@ class PathProcessor
      */
     public function filterInconvertableFiles(Finder $finder): Finder
     {
-        $inconvertibles = DB::table('offline_responsiveimages_inconvertibles')
+        $inconvertibles = DB::table('webbook_responsiveimages_inconvertibles')
             ->where('path', $this->path)
             ->select(['filename'])
             ->get()

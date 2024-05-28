@@ -1,4 +1,4 @@
-<?php namespace OFFLINE\ResponsiveImages\ReportWidgets;
+<?php namespace WebBook\ResponsiveImages\ReportWidgets;
 
 use Backend\Classes\ReportWidgetBase;
 use Exception;
@@ -50,7 +50,7 @@ class ClearCache extends ReportWidgetBase
 
     public function onClearCache() {
         Artisan::call('responsive-images:clear');
-        Flash::success(Lang::get('offline.responsiveimages::lang.reportwidgets.clearcache.success'));
+        Flash::success(Lang::get('webbook.responsiveimages::lang.reportwidgets.clearcache.success'));
     }
 
     /**

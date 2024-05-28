@@ -1,13 +1,13 @@
-<?php namespace OFFLINE\ResponiveImages\Updates;
+<?php namespace WebBook\ResponiveImages\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class TableCreateOfflineResponsiveimagesInconvertables extends Migration
+class TableCreateWebBookResponsiveimagesInconvertables extends Migration
 {
     public function up()
     {
-        Schema::create('offline_responsiveimages_inconvertibles', function($table)
+        Schema::create('webbook_responsiveimages_inconvertibles', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -21,6 +21,6 @@ class TableCreateOfflineResponsiveimagesInconvertables extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('offline_responsiveimages_inconvertibles');
+        Schema::dropIfExists('webbook_responsiveimages_inconvertibles');
     }
 }

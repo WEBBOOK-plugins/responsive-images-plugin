@@ -2,13 +2,13 @@
     <h3><?= e($this->property('title')) ?></h3>
 
     <?php if (!isset($error)): ?>
-        <p><?= e(trans('offline.responsiveimages::lang.reportwidgets.clearcache.description')) ?></p>
-        <a  
+        <p><?= e(trans('webbook.responsiveimages::lang.reportwidgets.clearcache.description')) ?></p>
+        <a
             data-request="onClearCache"
-            data-request-confirm="<?= e(trans('offline.responsiveimages::lang.reportwidgets.clearcache.confirm')) ?>"
+            data-request-confirm="<?= e(trans('webbook.responsiveimages::lang.reportwidgets.clearcache.confirm')) ?>"
             data-attach-loading
             class="btn btn-warning">
-            <?= e(trans('offline.responsiveimages::lang.reportwidgets.clearcache.button')) ?>
+            <?= e(trans('webbook.responsiveimages::lang.reportwidgets.clearcache.button')) ?>
         </a>
     <?php else: ?>
         <p class="flash-message static warning"><?= e($error) ?></p>

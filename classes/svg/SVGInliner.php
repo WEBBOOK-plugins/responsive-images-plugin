@@ -1,6 +1,6 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes\SVG;
+namespace WebBook\ResponsiveImages\Classes\SVG;
 
 
 use October\Rain\Parse\Twig;
@@ -17,9 +17,9 @@ class SVGInliner
      * @var string
      */
     protected $notFoundSvg = <<<EOL
-<svg data-error="[OFFLINE.ResponsiveImages] Inline SVG '%s' not found!"
+<svg data-error="[WebBook.ResponsiveImages] Inline SVG '%s' not found!"
     style="width: 20px; fill: currentColor"
-    xmlns="http://www.w3.org/2000/svg" 
+    xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 60 60">
         <path d="M0 0v60h60V0H0zm58 58H2V2h56v56z"/>
         <path fill="#f00" d="M16.009 45.405l14.142-14.142 14.142 14.142 1.414-1.414-14.142-14.142 14.142-14.142-1.414-1.414-14.142 14.142-14.142-14.142-1.414 1.414 14.142 14.142-14.142 14.142z"/>
@@ -50,7 +50,7 @@ EOL;
         if ( ! file_exists($path)) {
             logger()->warning(
                 sprintf(
-                    '[OFFLINE.ResponsiveImages] Cannot inline svg %s. Not found in %s.',
+                    '[WebBook.ResponsiveImages] Cannot inline svg %s. Not found in %s.',
                     $relPath,
                     $path
                 )

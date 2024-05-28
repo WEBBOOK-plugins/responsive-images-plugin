@@ -1,20 +1,20 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes;
+namespace WebBook\ResponsiveImages\Classes;
 
 use Config;
 use DOMDocument;
 use DOMElement;
-use OFFLINE\ResponsiveImages\Classes\Exceptions\FileNotFoundException;
-use OFFLINE\ResponsiveImages\Classes\Exceptions\RemotePathException;
-use OFFLINE\ResponsiveImages\Classes\Exceptions\UnallowedFileTypeException;
+use WebBook\ResponsiveImages\Classes\Exceptions\FileNotFoundException;
+use WebBook\ResponsiveImages\Classes\Exceptions\RemotePathException;
+use WebBook\ResponsiveImages\Classes\Exceptions\UnallowedFileTypeException;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 
 /**
  * Replaces all images in the HTML document.
  *
- * @package OFFLINE\ResponsiveImages\Classes
+ * @package WebBook\ResponsiveImages\Classes
  */
 class DomManipulator
 {
@@ -102,8 +102,8 @@ class DomManipulator
             $this->setClassAttribute($node);
 
             // If it's an Image with a focuspoint add additional properties.
-            if (strpos($source->url, 'offline-focus')) {
-                $filename = substr($source->url, strpos( $source->url, 'offline-focus'));
+            if (strpos($source->url, 'webbook-focus')) {
+                $filename = substr($source->url, strpos( $source->url, 'webbook-focus'));
 
                 $sourceAttributes = explode('_', $filename);
 
@@ -315,7 +315,7 @@ class DomManipulator
     {
         if ($this->settings->logErrors || $forceLogEntry) {
             $this->logger->warning(
-                sprintf('[OFFLINE.ResponsiveImages] %s', $message),
+                sprintf('[WebBook.ResponsiveImages] %s', $message),
                 compact('exception')
             );
         }

@@ -114,7 +114,7 @@ and provide the path to the binary using the `--converter-path` option.
 
 #### Conversion errors
 
-You can find a log of failed image conversions in the `offline_responsiveimages_inconvertibles` table.
+You can find a log of failed image conversions in the `webbook_responsiveimages_inconvertibles` table.
 If the conversion for a file failed, it will be logged in this table. The conversion will not be
 retried for files that failed before. To force a retry, remove the file from the table table
 and run the conversion command again.
@@ -248,7 +248,7 @@ This call will result in the following HTML:
 
 
 ```html
-<img src="/storage/temp/public/a9f/2bd/159/offline-focus_30_400_500_50_50_0_0_auto__400.jpg"
+<img src="/storage/temp/public/a9f/2bd/159/webbook-focus_30_400_500_50_50_0_0_auto__400.jpg"
      alt=""
      class="focuspoint-image"
      style="width: 100%; height: 100%; object-fit: cover; object-position: 30% 80%;">
@@ -263,7 +263,7 @@ All of these settings are available on the plugin's backend settings page.
 
 ```html
 <div class="focuspoint-container" data-focus-x="50" data-focus-y="30">
-    <img src="/storage/temp/public/a9f/2bd/159/offline-focus_30_400_500_50_50_0_0_auto__400.jpg"
+    <img src="/storage/temp/public/a9f/2bd/159/webbook-focus_30_400_500_50_50_0_0_auto__400.jpg"
          alt=""
          class="focuspoint-image"
          data-focus-x="50"

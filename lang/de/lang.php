@@ -1,16 +1,19 @@
-<?php return [
-    'plugin'            => [
-        'name'                       => 'ResponsiveImages',
-        'description'                => 'Fügt srcset und sizes Attribute zu <img>-Tags hinzu',
-        'author'                     => 'OFFLINE GmbH',
-        'manage_settings'            => 'Einstellungen für responsive Bilder',
+<?php
+
+declare(strict_types=1);
+
+return [
+    'plugin' => [
+        'name' => 'ResponsiveImages',
+        'description' => 'Fügt srcset und sizes Attribute zu <img>-Tags hinzu',
+        'author' => 'WebBook',
+        'manage_settings' => 'Einstellungen für responsive Bilder',
         'manage_settings_permission' => 'Kann ResponsiveImages-Einstellungen verwalten',
     ],
     'settings' => [
-
         'tabs' => [
             'responsive_image' => 'Responsive Image',
-            'focuspoint' => 'Focuspoint'
+            'focuspoint' => 'Focuspoint',
         ],
 
         'sections' => [
@@ -91,5 +94,5 @@
             'confirm' => 'Bilder-Cache wirklich leeren?',
             'success' => 'Bilder-Cache geleert',
         ],
-    ]
+    ],
 ];

@@ -1,15 +1,15 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Console;
+namespace WebBook\ResponsiveImages\Console;
 
 use Carbon\Carbon;
 use Illuminate\Console\Command;
-use OFFLINE\ResponsiveImages\Classes\Convert\Converter;
-use OFFLINE\ResponsiveImages\Classes\Convert\ConvertResult;
-use OFFLINE\ResponsiveImages\Classes\Convert\PathProcessor;
-use OFFLINE\ResponsiveImages\Classes\Convert\PathProcessorOptions;
-use OFFLINE\ResponsiveImages\Classes\Convert\WebpConverter;
-use OFFLINE\ResponsiveImages\Models\Settings;
+use WebBook\ResponsiveImages\Classes\Convert\Converter;
+use WebBook\ResponsiveImages\Classes\Convert\ConvertResult;
+use WebBook\ResponsiveImages\Classes\Convert\PathProcessor;
+use WebBook\ResponsiveImages\Classes\Convert\PathProcessorOptions;
+use WebBook\ResponsiveImages\Classes\Convert\WebpConverter;
+use WebBook\ResponsiveImages\Models\Settings;
 use Symfony\Component\Finder\Finder;
 
 class ConvertCommand extends Command
@@ -61,7 +61,7 @@ class ConvertCommand extends Command
                 }
 
             } catch (\Throwable $e) {
-                logger()->error(sprintf('[OFFLINE.ResponsiveImages]: webp-conversion failed: %s', $e));
+                logger()->error(sprintf('[WebBook.ResponsiveImages]: webp-conversion failed: %s', $e));
                 $this->output->write(sprintf("\n<fg=white;bg=red>Conversion of '%s' failed!</>", $path), true);
                 $this->output->write("\n<fg=white;bg=red>" . $e->getMessage() . "</>\n", true);
                 $this->output->write("<fg=blue>" . $e->getTraceAsString() . "</>\n", true);
@@ -85,7 +85,7 @@ class ConvertCommand extends Command
                     $result
                 );
             default:
-                throw new \ApplicationException('Format "' . $this->format . '" to convert the files is not supported. See https://github.com/OFFLINE-GmbH/oc-responsive-images-plugin for further information.');
+                throw new \ApplicationException('Format "' . $this->format . '" to convert the files is not supported. See https://github.com/WebBook-GmbH/oc-responsiveimages for further information.');
 
         }
     }

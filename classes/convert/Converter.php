@@ -1,6 +1,6 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes\Convert;
+namespace WebBook\ResponsiveImages\Classes\Convert;
 
 use Symfony\Component\Finder\SplFileInfo;
 

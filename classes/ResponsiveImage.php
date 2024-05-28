@@ -1,15 +1,15 @@
 <?php
 
-namespace OFFLINE\ResponsiveImages\Classes;
+namespace WebBook\ResponsiveImages\Classes;
 
 use Cache;
 use Config;
 use File as FileHelper;
 use Log;
-use OFFLINE\ResponsiveImages\Classes\Exceptions\FileNotFoundException;
-use OFFLINE\ResponsiveImages\Classes\Exceptions\RemotePathException;
-use OFFLINE\ResponsiveImages\Classes\Exceptions\UnallowedFileTypeException;
-use OFFLINE\ResponsiveImages\Models\Settings;
+use WebBook\ResponsiveImages\Classes\Exceptions\FileNotFoundException;
+use WebBook\ResponsiveImages\Classes\Exceptions\RemotePathException;
+use WebBook\ResponsiveImages\Classes\Exceptions\UnallowedFileTypeException;
+use WebBook\ResponsiveImages\Models\Settings;
 use Media\Classes\MediaLibrary;
 use URL;
 use WebPConvert\WebPConvert;
@@ -17,7 +17,7 @@ use WebPConvert\WebPConvert;
 /**
  * Creates the various copies of an image.
  *
- * @package OFFLINE\ResponsiveImages\Classes
+ * @package WebBook\ResponsiveImages\Classes
  */
 class ResponsiveImage
 {

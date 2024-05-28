@@ -103,7 +103,7 @@ function onImageClick(e) {
     console.log('clicked')
 
     waitForConfigForm(0, function () {
-        // Abort if the OFFLINE.ResponsiveImages fields are missing.
+        // Abort if the WebBook.ResponsiveImages fields are missing.
         if (!document.getElementById('x-axis')) {
             return
         }
@@ -160,7 +160,7 @@ function waitForConfigForm(tries, callback) {
         return callback()
     }
     if (tries >= 10) {
-        console.error('[OFFLINE.ResponsiveImages] Config form failed to load.')
+        console.error('[WebBook.ResponsiveImages] Config form failed to load.')
         return false
     }
     setTimeout(function () {

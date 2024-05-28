@@ -1,6 +1,6 @@
 <?php
 /**
- * Settings for OFFLINE.ResponsiveImages
+ * Settings for WebBook.ResponsiveImages
  */
 return [
     // What dimensions (width) to create of each image
