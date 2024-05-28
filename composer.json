@@ -1,5 +1,5 @@
 {
-  "name": "webbook/oc-responsiveimages-plugin",
+  "name": "webbook/responsiveimages-plugin",
   "type": "october-plugin",
   "description": "ResponsiveImages Plugin for October CMS",
   "keywords": [
