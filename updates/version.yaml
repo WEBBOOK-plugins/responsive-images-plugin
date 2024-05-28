@@ -118,3 +118,5 @@
     - 'Fixed config extension event handler'
 3.0.0:
     - 'Init plugin for WebBook author'
+3.0.1:
+    - 'Fix migrations'
